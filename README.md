@@ -27,12 +27,13 @@ A full-featured blog application .This project demonstrates how to build a moder
 ## 📁 Folder Structure (Simplified)
 ```
 src/
-├── appwrite/ # Appwrite API integration and services
-├── components/ # Reusable UI components (Header, Input, Button, etc.)
-├── features/ # Redux slices and state logic
+├── AppWrite/ # Appwrite API integration and services(Authorisation and storage)
+├── Components/ # Reusable UI components (Header,Footer,AuthLayout, Input, Button, etc.)
+├── conf/ # `conf.js` – Centralized configuration file for environment variables used throughout the app (Appwrite project, database, bucket, TinyMCE API, etc.).
+├── store/ # Redux slices and state logic
 ├── pages/ # Route-based pages (Home, Login, Signup, AllPosts, AddPost, EditPost)
-├── utils/ # Helper functions
-└── App.jsx # Main application entry point
+├── App.jsx # Main layout component; manages user auth on load, shows header/footer, and routes content with <Outlet />
+└── main.jsx # Entry point of the app that sets up routing, Redux store, and renders the root component.
 ```
 
 ## 🔧 Setup Instructions
@@ -68,29 +69,29 @@ npm run dev
 ```
 The application should now be running on http://localhost:5173.
 ### 🌱 Learning Outcomes
-Built a complete blog platform using React from scratch
+-Built a complete blog platform using React from scratch
 
-Understood how to use Redux Toolkit for efficient state management
+-Understood how to use Redux Toolkit for efficient state management
 
-Learned routing and protected routes using React Router
+-Learned routing and protected routes using React Router
 
-Integrated Appwrite as a BaaS (Backend as a Service)
+-Integrated Appwrite as a BaaS (Backend as a Service)
 
-Used TinyMCE to enable rich-text editing
+-Used TinyMCE to enable rich-text editing
 
-Practiced modular and scalable project structuring
+-Practiced modular and scalable project structuring
 
 ### 🛸 Deployment
 You can deploy this app easily on platforms like Vercel or Netlify.
 
 ## 🔒 Authentication & Authorization
-All posts are private by default (Inactive)
+-All posts are private by default (Inactive)
 
-Only logged-in users can create, edit, or delete their own posts
+-Only logged-in users can create, edit, or delete their own posts
 
-Only active posts are visible to the public
+-Only active posts are visible to the public
 
-Edit and Delete buttons appear only for the post author
+-Edit and Delete buttons appear only for the post author
 
 ### 🤝 Acknowledgements
 This project was built as part of the [Chai aur Code](https://www.youtube.com/@chaiourcode) React series by [@hiteshdotcom](https://twitter.com/hiteshdotcom).
