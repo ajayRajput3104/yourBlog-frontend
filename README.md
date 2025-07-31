@@ -27,13 +27,14 @@ A full-featured blog application .This project demonstrates how to build a moder
 ## 📁 Folder Structure (Simplified)
 ```
 src/
-├── AppWrite/ # Appwrite API integration and services(Authorisation and storage)
-├── Components/ # Reusable UI components (Header,Footer,AuthLayout, Input, Button, etc.)
-├── conf/ # `conf.js` – Centralized configuration file for environment variables used throughout the app (Appwrite project, database, bucket, TinyMCE API, etc.).
-├── store/ # Redux slices and state logic
-├── pages/ # Route-based pages (Home, Login, Signup, AllPosts, AddPost, EditPost)
-├── App.jsx # Main layout component; manages user auth on load, shows header/footer, and routes content with <Outlet />
-└── main.jsx # Entry point of the app that sets up routing, Redux store, and renders the root component.
+│
+├── AppWrite/             # Appwrite API integration and services(Authorisation and storage)
+├── Components/           # Reusable UI components (Header,Footer,AuthLayout, Input, Button, etc.)
+├── conf/                 # `conf.js` – Centralized configuration file for environment variables used throughout the app (Appwrite project, database, bucket, TinyMCE API, etc.).
+├── store/                # Redux slices and state logic
+├── pages/                # Route-based pages (Home, Login, Signup, AllPosts, AddPost, EditPost)
+├── App.jsx               # Main layout component; manages user auth on load, shows header/footer, and routes content with <Outlet />
+└── main.jsx              # Entry point of the app that sets up routing, Redux store, and renders the root component.
 ```
 
 ## 🔧 Setup Instructions
