@@ -52,7 +52,7 @@ Create a project on Appwrite Cloud
 
 Enable Authentication, Database, and Storage
 
-Set up the following environment values in conf.js or a .env file:
+Set up the following environment values in .env file:
 ```js
 export const conf = {
   appwriteUrl: "https://cloud.appwrite.io/v1",
@@ -65,9 +65,9 @@ export const conf = {
 ### 4. Run the App
 ```bash
 npm run dev
-The application should now be running on http://localhost:5173.
 ```
-🌱 Learning Outcomes
+The application should now be running on http://localhost:5173.
+### 🌱 Learning Outcomes
 Built a complete blog platform using React from scratch
 
 Understood how to use Redux Toolkit for efficient state management
@@ -80,10 +80,10 @@ Used TinyMCE to enable rich-text editing
 
 Practiced modular and scalable project structuring
 
-🛸 Deployment
+### 🛸 Deployment
 You can deploy this app easily on platforms like Vercel or Netlify.
 
-🔒 Authentication & Authorization
+## 🔒 Authentication & Authorization
 All posts are private by default (Inactive)
 
 Only logged-in users can create, edit, or delete their own posts
@@ -92,21 +92,19 @@ Only active posts are visible to the public
 
 Edit and Delete buttons appear only for the post author
 
-🤝 Acknowledgements
+### 🤝 Acknowledgements
 Special thanks to Hitesh Choudhary for the wonderful Chai aur Code series that inspired this project.
 
-💬 Feedback or Suggestions?
+### 💬 Feedback or Suggestions?
 This is a learning project and I’m open to all feedback! Feel free to fork, open issues, or submit pull requests.
 
 📜 License
 This project is open-sourced under the MIT License.
-
-vbnet
-Copy
-Edit
+```vbnet
 
 Let me know if you want to add:
 - A live demo link
 - Screenshots or GIFs of the app in action
 - API schema or database structure overview  
 I'll help plug them in cleanly.
+```
