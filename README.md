@@ -102,6 +102,5 @@ Special thanks to Hitesh Choudhary for the wonderful Chai aur Code series that i
 This is a learning project and I’m open to all feedback! Feel free to fork, open issues, or submit pull requests.
 
 
-![App Landing Page Screenshot](<img width="1913" height="967" alt="Screenshot 2025-07-31 191511" src="https://github.com/user-attachments/assets/01774b81-fa6d-4acc-b261-ee71df1aaf78" />
-)
+![App Landing Page Screenshot](https://images.pexels.com/photos/33243598/pexels-photo-33243598.jpeg)
 
