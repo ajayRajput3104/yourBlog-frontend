@@ -42,8 +42,8 @@ src/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/react-blog-app.git
-cd react-blog-app
+git clone https://github.com/ajayRajput3104/YourBlog.git
+cd YourBlog
 ```
 ### 2. Install dependencies
 ```bash
@@ -101,13 +101,10 @@ Special thanks to Hitesh Choudhary for the wonderful Chai aur Code series that i
 ### 💬 Feedback or Suggestions?
 This is a learning project and I’m open to all feedback! Feel free to fork, open issues, or submit pull requests.
 
-📜 License
-This project is open-sourced under the MIT License.
-```vbnet
 
-Let me know if you want to add:
-- A live demo link
-- Screenshots or GIFs of the app in action
-- API schema or database structure overview  
-I'll help plug them in cleanly.
+```
+- Screenshots of landing page
+<img width="1913" height="967" alt="Screenshot 2025-07-31 191511" src="https://github.com/user-attachments/assets/bed4445c-0cd5-46b6-818c-428f1608ada6" />
+
+
 ```
