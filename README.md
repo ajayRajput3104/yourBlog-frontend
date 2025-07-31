@@ -1,6 +1,6 @@
 # 📝 React Blog App
 
-A full-featured blog application built as part of the [Chai aur Code](https://www.youtube.com/@chaiourcode) React series by [@hiteshdotcom](https://twitter.com/hiteshdotcom). This project demonstrates how to build a modern blog platform using React with real-time backend services powered by Appwrite. This is my first major React project—just started posting, so show maximum support! 💙
+A full-featured blog application .This project demonstrates how to build a modern blog platform using React with real-time backend services powered by Appwrite.💙
 
 ## 🚀 Features
 
@@ -25,7 +25,7 @@ A full-featured blog application built as part of the [Chai aur Code](https://ww
 | Tailwind CSS           |                                  |
 
 ## 📁 Folder Structure (Simplified)
-
+```
 src/
 ├── appwrite/ # Appwrite API integration and services
 ├── components/ # Reusable UI components (Header, Input, Button, etc.)
@@ -33,7 +33,7 @@ src/
 ├── pages/ # Route-based pages (Home, Login, Signup, AllPosts, AddPost, EditPost)
 ├── utils/ # Helper functions
 └── App.jsx # Main application entry point
-
+```
 
 ## 🔧 Setup Instructions
 
@@ -93,6 +93,7 @@ Only active posts are visible to the public
 Edit and Delete buttons appear only for the post author
 
 ### 🤝 Acknowledgements
+This project was built as part of the [Chai aur Code](https://www.youtube.com/@chaiourcode) React series by [@hiteshdotcom](https://twitter.com/hiteshdotcom).
 Special thanks to Hitesh Choudhary for the wonderful Chai aur Code series that inspired this project.
 
 ### 💬 Feedback or Suggestions?
