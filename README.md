@@ -34,9 +34,6 @@ src/
 ├── utils/ # Helper functions
 └── App.jsx # Main application entry point
 
-bash
-Copy
-Edit
 
 ## 🔧 Setup Instructions
 
@@ -45,11 +42,11 @@ Edit
 ```bash
 git clone https://github.com/yourusername/react-blog-app.git
 cd react-blog-app
-2. Install dependencies
-bash
-Copy
-Edit
+```
+### 2. Install dependencies
+```bash
 npm install
+```
 3. Configure Appwrite
 Create a project on Appwrite Cloud
 
