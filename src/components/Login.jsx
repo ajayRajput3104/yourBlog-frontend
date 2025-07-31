@@ -21,7 +21,7 @@ function Login() {
         if (userData) dispatch(storeLogin(userData));
         navigate("/");
       }
-    } catch (error) {
+    } catch (error) {4
       setError(error.message);
     }
   };
@@ -57,7 +57,7 @@ function Login() {
             <div className="space-y-5">
                 <Input
                 label="Email:"
-                placeHolder="Enter your email.."
+                placeholder="Enter your email.."
                 type="email"
                 {...register("email",{
                     required:true,
@@ -69,7 +69,7 @@ function Login() {
                 />
                 <Input
                 label="Password:"
-                placeHolder="Enter your password"
+                placeholder="Enter your password"
                 type="password"
                 {...register("password",{
                     required:true,

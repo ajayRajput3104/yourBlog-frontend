@@ -15,9 +15,12 @@ function Signup() {
   const create = async (data) => {
     setError("");
     try {
-      const userData = await authService.getCurrentUser();
-      if (userData) dispatch(login(userData));
-      navigate("/");
+      const userData = await authService.createAccount(data)
+      if (userData) {
+        const userData=await authService.getCurrentUser()
+        if(userData)dispatch(login(userData));
+        navigate("/");
+      }
     } catch (error) {
       setError(error.message);
     }
@@ -56,7 +59,7 @@ function Signup() {
             />
             <Input
               label="Email:"
-              placeHolder="Enter your email.."
+              placeholder="Enter your email.."
               type="email"
               {...register("email", {
                 required: true,
@@ -69,7 +72,7 @@ function Signup() {
             />
             <Input
               label="Password:"
-              placeHolder="Enter password"
+              placeholder="Enter password"
               type="password"
               {...register("password", {
                 required: true,
