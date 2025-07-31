@@ -47,16 +47,13 @@ cd react-blog-app
 ```bash
 npm install
 ```
-3. Configure Appwrite
+### 3. Configure Appwrite
 Create a project on Appwrite Cloud
 
 Enable Authentication, Database, and Storage
 
 Set up the following environment values in conf.js or a .env file:
-```
-js
-Copy
-Edit
+```js
 export const conf = {
   appwriteUrl: "https://cloud.appwrite.io/v1",
   appwriteProjectId: "your_project_id",
@@ -64,13 +61,12 @@ export const conf = {
   appwriteCollectionId: "your_collection_id",
   appwriteBucketId: "your_bucket_id",
 };
-4. Run the App
-bash
-Copy
-Edit
+```
+### 4. Run the App
+```bash
 npm run dev
 The application should now be running on http://localhost:5173.
-
+```
 🌱 Learning Outcomes
 Built a complete blog platform using React from scratch
 
