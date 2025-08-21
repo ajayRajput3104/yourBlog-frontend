@@ -67,7 +67,7 @@ function PostForm({ post }) {
     } catch (error) {
       setMessage(
         "Form Submission Failed: " +
-          (err.response?.data?.message || err.message)
+          (error.response?.data?.message || error.message)
       );
       throw new Error(
         error.response?.data?.message || "Form Submission failed"
@@ -100,17 +100,16 @@ function PostForm({ post }) {
     };
   }, [watch, slugTransform, setValue]);
 
-  {
-    loading && (
+  if (loading) {
+    return (
       <div className="fixed inset-0 flex flex-col items-center justify-center bg-gray-950 bg-opacity-90 z-50">
         <Loader2 className="animate-spin w-16 h-16 text-purple-400" />
         <p className="mt-6 text-lg text-gray-200 font-semibold">{message}</p>
       </div>
     );
   }
-
-  {
-    !loading && message && message.includes("Failed") && (
+  if (!loading && message && message.includes("Failed")) {
+    return (
       <div className="fixed inset-0 flex flex-col items-center justify-center bg-gray-950 bg-opacity-90 z-50 p-4 text-center">
         <p className="text-lg text-red-400 font-semibold">{message}</p>
         <button
