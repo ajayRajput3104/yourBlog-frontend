@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect,useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button, Input, Select, RTE } from "../index.jsx";
 import postService from "../../services/PostService.js";
@@ -101,6 +101,14 @@ function PostForm({ post }) {
   }, [watch, slugTransform, setValue]);
 
   if (loading) {
+    return (
+      <div className="fixed inset-0 flex flex-col items-center justify-center bg-gray-950 bg-opacity-90 z-50">
+        <Loader2 className="animate-spin w-16 h-16 text-purple-400" />
+        <p className="mt-6 text-lg text-gray-200 font-semibold">{message}</p>
+      </div>
+    );
+  }
+  if (error) {
     return (
       <div className="fixed inset-0 flex flex-col items-center justify-center bg-gray-950 bg-opacity-90 z-50">
         <Loader2 className="animate-spin w-16 h-16 text-purple-400" />
