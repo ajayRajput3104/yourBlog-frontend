@@ -100,19 +100,25 @@ function PostForm({ post }) {
     };
   }, [watch, slugTransform, setValue]);
 
-  if (loading) {
-    return (
+  {
+    loading && (
       <div className="fixed inset-0 flex flex-col items-center justify-center bg-gray-950 bg-opacity-90 z-50">
         <Loader2 className="animate-spin w-16 h-16 text-purple-400" />
         <p className="mt-6 text-lg text-gray-200 font-semibold">{message}</p>
       </div>
     );
   }
-  if (error) {
-    return (
-      <div className="fixed inset-0 flex flex-col items-center justify-center bg-gray-950 bg-opacity-90 z-50">
-        <Loader2 className="animate-spin w-16 h-16 text-purple-400" />
-        <p className="mt-6 text-lg text-gray-200 font-semibold">{message}</p>
+
+  {
+    !loading && message && message.includes("Failed") && (
+      <div className="fixed inset-0 flex flex-col items-center justify-center bg-gray-950 bg-opacity-90 z-50 p-4 text-center">
+        <p className="text-lg text-red-400 font-semibold">{message}</p>
+        <button
+          className="mt-6 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition"
+          onClick={() => navigate("/add-post")}
+        >
+          Retry Posting
+        </button>
       </div>
     );
   }
