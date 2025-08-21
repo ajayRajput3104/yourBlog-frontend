@@ -1,23 +1,22 @@
-import Container from "./container/Container";
-import Footer from "./Footer/Footer";
-import Logo from "./Footer/Logo";
-import Header from "./Header/Header";
-import LogoutBtn from "./Header/LogoutBtn";
-import Button from "./Header/Button";
-import Input from "./Header/Input";
-import Select from "./Header/select";
-import RTE from "./RTE";
-import AuthLayout from "./AuthLayout";
-import Login from "./Login";
-import Signup from "./Signup";
-import PostCard from "./PostCard";
-import PostForm from "./post-form/PostForm";
-
+import Footer from "./layouts/Footer.jsx";
+import Logo from "./common/Logo.jsx";
+import LogoutBtn from "./auth/LogoutBtn.jsx";
+import Button from "./common/Button.jsx";
+import Input from "./common/Input.jsx";
+import Select from "./common/Select.jsx";
+import RTE from "./editor/RTE.jsx";
+import AuthLayout from "./layouts/Protected.jsx";
+import Login from "./auth/Login.jsx";
+import Signup from "./auth/Signup.jsx";
+import PostCard from "./posts/PostCard.jsx";
+import PostForm from "./posts/PostForm.jsx";
+import Sidebar from "./layouts/Sidebar.jsx";
+import LogoCollapse from "./common/LogoCollapse.jsx";
 export {
-  Header,
   Footer,
-  Container,
+  Sidebar,
   Logo,
+  LogoCollapse,
   LogoutBtn,
   Button,
   Input,

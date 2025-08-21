@@ -5,44 +5,39 @@ import App from "./App.jsx";
 import { Store } from "./store/store.jsx";
 import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import EditPost from "./pages/EditPost.jsx";
-import AddPost from "./pages/AddPost.jsx";
-import Home from "./pages/Home.jsx";
-import Login from './pages/Login.jsx'
-import Signup from './pages/Signup.jsx'
-import AllPosts from "./pages/AllPosts.jsx";
-import Post from "./pages/Post.jsx";
+
+import Post from "./pages/Posts/Post.jsx";
 import { AuthLayout } from "./components/index.jsx";
+
+import Home from "./pages/Home.jsx";
+import EditPost from "./pages/Posts/EditPost.jsx"
+import Login from "./pages/Auth/Login.jsx"
+import Signup from "./pages/Auth/Signup.jsx"
+import AllPosts from "./pages/Posts/AllPosts.jsx";
+import ImageView from "./pages/Misc/Image.jsx";
+import AddPost from "./pages/Posts/AddPost.jsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
       {
-        path: "/",
-        element: <Home/>
+        index: true,
+        element: <Home />,
       },
       {
         path: "/login",
-        element: (
-          <AuthLayout authentication={false}>
-            <Login />
-          </AuthLayout>
-        ),
+        element: <Login />,
       },
       {
         path: "/signup",
-        element: (
-          <AuthLayout authentication={false}>
-            <Signup />
-          </AuthLayout>
-        ),
+        element: <Signup />,
       },
       {
         path: "/all-posts",
         element: (
-          <AuthLayout authentication={false}>
-            {" "}
+          <AuthLayout>
             <AllPosts />
           </AuthLayout>
         ),
@@ -50,7 +45,7 @@ const router = createBrowserRouter([
       {
         path: "/add-post",
         element: (
-          <AuthLayout authentication>
+          <AuthLayout>
             {" "}
             <AddPost />
           </AuthLayout>
@@ -66,8 +61,12 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path:'/post/:slug',
-        element:<Post />
+        path: "/post/:slug",
+        element: <Post />,
+      },
+      {
+        path: "/image/:id",
+        element: <ImageView />,
       },
     ],
   },

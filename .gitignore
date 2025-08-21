@@ -29,5 +29,5 @@ dist-ssr/
 *.sw?
 
 # Environment files
-YourBlog/.env
-YourBlog/.env.*  # also ignore any env variants like .env.production or .env.local
+.env
+.env.*  # also ignore any env variants like .env.production or .env.local
