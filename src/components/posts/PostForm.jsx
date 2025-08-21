@@ -6,6 +6,7 @@ import fileService from "../../services/FileService.js";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import slugify from "slugify";
+import { Loader2 } from "lucide-react";
 
 function PostForm({ post }) {
   const [loading, setLoading] = useState(false);
