@@ -25,7 +25,7 @@ class PostService {
     try {
       const authData = JSON.parse(localStorage.getItem("auth"));
       const token = authData.accessToken;
-      const res = await axios.put(
+      const res = await api.put(
         `${API_URL}/posts/${id}`,
         {
           title,

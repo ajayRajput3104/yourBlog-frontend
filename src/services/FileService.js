@@ -11,8 +11,7 @@ export class FileService {
       const formData = new FormData();
       formData.append("file", file);
       
-      const res = await api.post(
-        `http://localhost:5000/api/file/upload`,
+      const res = await api.post(`${API_URL}/file/upload`,
         formData,
         {
           headers: {
