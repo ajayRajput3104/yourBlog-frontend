@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect } from "react";
-import { useForm} from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { Button, Input, Select, RTE } from "../index.jsx";
 import postService from "../../services/PostService.js";
 import fileService from "../../services/FileService.js";
@@ -8,6 +8,9 @@ import { useSelector } from "react-redux";
 import slugify from "slugify";
 
 function PostForm({ post }) {
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
   const { register, handleSubmit, watch, setValue, control, getValues } =
     useForm({
       defaultValues: {
@@ -22,6 +25,8 @@ function PostForm({ post }) {
   const user = useSelector((state) => state.auth.user);
   const submit = async (data) => {
     try {
+      setLoading(true);
+      setMessage(post ? "Updating post..." : "Publishing post...");
       let uploadedFile = null;
       //handle file upload if present
       if (data.featuredImage && data.featuredImage.length > 0) {
@@ -59,9 +64,15 @@ function PostForm({ post }) {
         }
       }
     } catch (error) {
+      setMessage(
+        "Form Submission Failed: " +
+          (err.response?.data?.message || err.message)
+      );
       throw new Error(
         error.response?.data?.message || "Form Submission failed"
       );
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -87,6 +98,15 @@ function PostForm({ post }) {
       subscription.unsubscribe();
     };
   }, [watch, slugTransform, setValue]);
+
+  if (loading) {
+    return (
+      <div className="fixed inset-0 flex flex-col items-center justify-center bg-gray-950 bg-opacity-90 z-50">
+        <Loader2 className="animate-spin w-16 h-16 text-purple-400" />
+        <p className="mt-6 text-lg text-gray-200 font-semibold">{message}</p>
+      </div>
+    );
+  }
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 py-10 px-4">
       <form
