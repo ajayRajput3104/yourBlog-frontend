@@ -47,7 +47,7 @@ export class AuthService {
     }
   }
 
-  //--login--
+  //--login--console
   async login({ email, password }) {
     try {
       const res = await axios.post(

@@ -26,7 +26,6 @@ function PostForm({ post }) {
       //handle file upload if present
       if (data.featuredImage && data.featuredImage.length > 0) {
         uploadedFile = await fileService.uploadFile(data.featuredImage[0]);
-        console.log("file uploaded sucessfully", uploadedFile);
         if (!uploadedFile?.url || !uploadedFile?.fileId) {
           throw new Error("File upload failed");
         }
@@ -42,8 +41,6 @@ function PostForm({ post }) {
         if (uploadedFile) {
           await fileService.deleteFile(post.featuredImage.id);
         }
-        console.log("user id", post.author);
-        console.log("post id", post._id);
         const updatedPost = await postService.updatePost(post._id, {
           ...data,
           featuredImage: uploadedFile ? data.featuredImage : post.featuredImage,
@@ -62,7 +59,6 @@ function PostForm({ post }) {
         }
       }
     } catch (error) {
-      console.error("Form submission failed:", error.response?.data || error);
       throw new Error(
         error.response?.data?.message || "Form Submission failed"
       );

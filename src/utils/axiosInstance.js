@@ -2,9 +2,10 @@ import axios from "axios";
 import { Store } from "../store/store.jsx";
 import authService from "../services/AuthService.js";
 import { login, logout } from "../store/authSlice.jsx";
-
+import env
+ from "./env.js";
 const api = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL:env.apiUrl,
 });
 
 api.interceptors.request.use((config) => {

@@ -19,7 +19,6 @@ function Login() {
         const userData = await authService.getCurrentUser();
         if (userData) {
           dispatch(storeLogin(userData));
-          console.log("User data going into store:", userData);
         }
         navigate("/");
       }
